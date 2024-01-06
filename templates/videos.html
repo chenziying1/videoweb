@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flask在线视频网站</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="header">
+        <h1>新年快乐！</h1>
+        <nav>
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="logout">退出登录</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="content">
+        <div id="videoPlayer">
+            <video id="video" src="{{ url_for('watch_video', filename=videos[0]) }}" type="video/mp4"></video>
+            <div id="controls">
+                <button id="playPause">开始</button>
+                <input id="volume" type="range" min="0" max="1" step="0.1" value="1">
+                <button id="fullscreen">全屏</button>
+                <button id="exitFullscreen">退出全屏</button>
+                <div id="commentSection">
+                    <input type="text" id="commentInput" placeholder="弹幕....">
+                    <button id="sendComment">发送</button>
+                </div>
+            </div>
+        </div>
+        <ul id="videoList">
+            {% for video in videos|sort %}
+                <li><a href="#" data-src="{{ url_for('watch_video', filename=video) }}">{{ video }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

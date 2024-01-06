@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #3498db, #9b59b6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px; /* 增加内边距 */
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    width: 50%; /* 设置宽度为50% */
+    max-width: 250px; /* 设置最大宽度，防止在大屏幕上过大 */
+}
+
+
+h1 {
+    text-align: center;
+}
+
+input, button {
+    box-sizing: border-box; /* 添加这一行 */
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: #3498db;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* login.css */
+
+/* 添加烟花的样式 */
+.firework {
+    position: fixed; /* 修改为fixed定位 */
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: explode 0.5s linear;
+}
+
+/* 定义烟花动画 */
+@keyframes explode {
+    to {
+        transform: scale(30);
+        opacity: 0;
+    }
+}

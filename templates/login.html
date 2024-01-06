@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    
+</head>
+<body>
+    <form method="post">
+        <h1>欢迎！</h1>
+        <input type="text" id="username" name="username" placeholder="用户名:" required>
+        <button type="submit">登录</button>
+    </form>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>
